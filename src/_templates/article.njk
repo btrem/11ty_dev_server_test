@@ -1,0 +1,20 @@
+{% extends './base.njk' %}
+
+    {% block topH1 %}
+        {%- if subtitle %}
+            <hgroup class="p-name">
+                <h1>{{ title }}</h1>
+                <h2>{{ subtitle }}</h2>
+            </hgroup>
+        {%- else %}
+            <h1 class="p-name">{{ title }}</h1>
+        {%- endif %}
+    {% endblock %}
+
+    {%- block pageDate %}
+        {%- if page.date %}
+            <p>
+                <time class="dt-published" datetime="{{ page.date | njkDate('YYYY-MM-DD') }}">{{ page.date | njkDate('MMMM D, YYYY') }}</time>
+            </p>
+        {%- endif %}
+    {%- endblock %}

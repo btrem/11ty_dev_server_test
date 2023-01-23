@@ -1,0 +1,4 @@
+{
+    "layout": "article.njk",
+    "permalink": "/{{ page.date | njkDate('YYYY/MM/DD') }}-{{ slug | slug }}"
+}

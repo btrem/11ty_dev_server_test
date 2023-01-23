@@ -1,0 +1,16 @@
+{
+  "main": ".eleventy.js",
+  "scripts": {
+    "start": "ELEVENTY_ENV=development npx eleventy --serve",
+    "debug": "DEBUG=Eleventy* npx @11ty/eleventy"
+  },
+  "author": "Brian Tremblay",
+  "dependencies": {
+    "@11ty/eleventy": "^2.0.0-canary.33",
+    "markdown-it-attrs": "^4.0.0",
+    "markdown-it-deflist": "^2.1.0",
+    "markdown-it-ins": "^3.0.1",
+    "markdown-it-mark": "^3.0.1",
+    "nunjucks-date-filter": "^0.1.1"
+  }
+}

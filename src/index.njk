@@ -1,0 +1,28 @@
+---
+layout: home.njk
+---
+{% for post in collections.all %}
+
+            <article>
+
+                <header>
+                    <h2>
+                        <a href="{{ post.url }}">{{ post.data.title }}</a>
+                    </h2>
+                    <p>
+                        <time datetime="{{ post.date | njkDate('YYYY-MM-DD') }}">{{ post.date | njkDate('MMMM D, YYYY') }}</time>
+                    </p>
+                </header>
+            {% if post.data.page.excerpt %}
+                <div>
+                    {{ post.data.page.excerpt | md | safe }}
+                </div>
+            {% endif %}
+                <footer>
+                    <p>
+                        <a class="readMore" aria-label="read {{ post.data.title }} article" href="{{ post.url }}">read more</a>
+                    </p>
+                </footer>
+
+            </article>
+{% endfor %}
